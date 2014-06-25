@@ -1,0 +1,31 @@
+/*
+** test.c for test in /home/balbo_a/rendu/Maths/101pong/srcs
+**
+** Made by Alan Balbo
+** Login   <balbo_a@epitech.net>
+**
+** Started on  Sun Nov 17 19:14:05 2013 Alan Balbo
+** Last update Sun Nov 17 19:17:20 2013 Alan Balbo
+*/
+
+#include <stdlib.h>
+#include <mlx_int.h>
+#include <mlx.h>
+
+int	main()
+{
+  int	fd;
+  void	*img;
+  void	*mlx;
+  void	*win;
+  int	*c;
+  int	*v;
+
+  c = 0;
+  v = 0;
+  mlx = mlx_init();
+  win = mlx_new_window(mlx, 900, 800, "cacac");
+  fd = open("lol.xpm", O_RDONLY);
+  img = mlx_xpm_file_to_image(mlx, fd, c, v);
+  mlx_put_image_to_window(mlx, win, img, 0, 0);
+}

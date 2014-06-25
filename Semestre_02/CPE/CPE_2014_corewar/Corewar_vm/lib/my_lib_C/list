@@ -1,0 +1,11 @@
+get_next_line.c
+my_getnbr.c
+my_printf.c
+my_printf_ext.c
+my_promptf.c
+my_put_things.c
+my_strconcat.c
+my_str_ops.c
+my_str_to_wordtab.c
+my_tkword.c
+xfunc.c

@@ -1,0 +1,39 @@
+/*
+** my_str_to_wordtab2.c for my_str_to_wordtab.c in /home/balbo_a/rendu/102chiffrement-2018-balbo_a
+**
+** Made by Alan Balbo
+** Login   <balbo_a@epitech.net>
+**
+** Started on  Mon Nov 18 19:47:51 2013 Alan Balbo
+** Last update Mon Nov 18 19:50:42 2013 Alan Balbo
+*/
+
+char	**my_str_to_wordab(char *str)
+{
+  int	i;
+  int	j;
+  char	**tab;
+
+  i = 0;
+  j = 0;
+  while (str[i])
+    {
+      if (str[i] == 32)
+	j = j + 1;
+      i = i + 1;
+    }
+  tab = xmalloc(sizeof(char*) * (j + 1));
+  tab[j] = 0;
+  i = 0;
+  j = 0;
+  k = 0;
+  while (str[i])
+    {
+      if (str[i] == 32)
+	{
+	  j = j + 1;
+	  k = 0;
+	}
+      tab[j][k] = str[i];
+    }
+}

@@ -1,0 +1,81 @@
+##
+## Makefile for ex_01 in /home/balbo_a/rendu/Piscine-C-lib/my
+## 
+## Made by Alan Balbo
+## Login   <balbo_a@epitech.net>
+## 
+## Started on  Mon Oct 21 10:11:40 2013 Alan Balbo
+## Last update Tue Nov 12 11:03:47 2013 Alan Balbo
+##
+
+NAME	= my_lib_C.a
+
+SRCS	= xfunc.c \
+	  my_evil_str.c \
+	  my_power_it.c \
+	  my_str_isalpha.c \
+	  my_power_rec.c \
+	  my_str_islower.c \
+	  my_putchar.c \
+	  my_str_isnum.c \
+	  my_putnbr_base.c \
+	  my_str_isprintable.c \
+	  my_aff_alpha.c \
+	  my_put_nbr.c \
+	  my_str_isupper.c \
+	  my_aff_chiffre.c \
+	  my_putstr.c \
+	  my_strlcat.c \
+	  my_aff_comb2.c \
+	  my_revstr.c \
+	  my_strlen.c \
+	  my_aff_comb.c \
+	  my_showmem.c \
+	  my_strlowcase.c \
+	  my_aff_combn.c \
+	  my_showstr.c \
+	  my_strncat.c \
+	  my_aff_revalpha.c \
+	  my_show_wordtab.c \
+	  my_strncmp.c \
+	  my_evil_str.c \
+	  my_strncpy.c \
+	  my_factorielle_it.c \
+	  my_sort_int_tab.c \
+	  my_strstr.c \
+	  my_factorielle_rec.c \
+	  my_square_root.c \
+	  my_str_to_wordtab.c \
+	  my_find_prime_sup.c \
+	  my_strcapitalize.c \
+	  my_getnbr_base.c \
+	  my_strcat.c \
+	  my_strupcase.c \
+	  my_getnbr.c \
+	  my_strcmp.c \
+	  my_swap.c \
+	  my_isneg.c \
+	  my_strcpy.c \
+	  my_is_prime.c \
+	  my_strdup.c
+
+OBJS	= $(SRCS:.c=.o)
+
+CP	= cp
+
+all: $(NAME) copylib
+
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
+
+copylib:
+	cp ${NAME} ../${NAME}
+
+clean:
+	$(RM) $(OBJS)
+
+fclean:		clean
+	$(RM) $(NAME)
+
+re:	fclean all
